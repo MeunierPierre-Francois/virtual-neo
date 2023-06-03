@@ -1,6 +1,6 @@
 import JeuForm from "../../components/JeuForm";
 
-const NewJeu = () => {
+const AddJeu = () => {
   return (
     <div>
       <h1>Nouveau Jeu</h1>
@@ -9,4 +9,4 @@ const NewJeu = () => {
   );
 };
 
-export default NewJeu;
+export default AddJeu;

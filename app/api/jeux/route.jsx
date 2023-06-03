@@ -3,9 +3,8 @@ import { mongooseConnect } from "../../lib/mongoose";
 import { NextResponse } from "next/server";
 
 export async function GET(request) {
-  if (request.query?.id) {
-    return NextResponse.json(await Jeu.findOne({ _id: request.query.id }));
-  }
+  await mongooseConnect();
+
   return NextResponse.json(await Jeu.find());
 }
 
@@ -20,6 +19,8 @@ export async function POST(request) {
     age,
     joueurMax,
     joueurMin,
+    imageSrc,
+    categorie,
   } = body;
 
   const jeu = await Jeu.create({
@@ -30,7 +31,43 @@ export async function POST(request) {
     age,
     joueurMax,
     joueurMin,
+    imageSrc,
+    categorie,
   });
 
   return NextResponse.json(jeu);
+}
+
+export async function PUT(request, params) {
+  await mongooseConnect();
+  const body = await request.json();
+  const {
+    _id,
+    nom,
+    description,
+    descriptionCourte,
+    prix,
+    age,
+    joueurMax,
+    joueurMin,
+    imageSrc,
+    categorie,
+  } = body;
+
+  return NextResponse.json(
+    await Jeu.updateOne(
+      { _id },
+      {
+        nom,
+        description,
+        descriptionCourte,
+        prix,
+        age,
+        joueurMax,
+        joueurMin,
+        imageSrc,
+        categorie,
+      }
+    )
+  );
 }
