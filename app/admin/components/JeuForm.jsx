@@ -3,6 +3,7 @@
 import axios from "axios";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BsCloudDownload } from "react-icons/bs";
 
 const JeuForm = ({
   _id,
@@ -136,26 +137,54 @@ const JeuForm = ({
           value={description}
           onChange={(ev) => setDescription(ev.target.value)}
         />
+
+        <div className="flex space-x-4">
+          <div>
+            <label>Prix de base par joueur</label>
+            <input
+              type="number"
+              placeholder="Prix"
+              value={prix}
+              onChange={(ev) => setPrix(ev.target.value)}
+            />
+          </div>
+          <div>
+            <label>Âge minimum</label>
+            <input
+              type="number"
+              placeholder="Âge"
+              value={age}
+              onChange={(ev) => setAge(ev.target.value)}
+            />
+          </div>
+        </div>
+        <div className="flex space-x-4 ">
+          <div>
+            <label>Nombre de joueur minimum</label>
+            <input
+              type="number"
+              placeholder="Nombre minimum"
+              value={joueurMin}
+              onChange={(ev) => setJoueurMin(ev.target.value)}
+            />
+          </div>
+          <div>
+            <label>Nombre de joueur maximum</label>
+            <input
+              type="number"
+              placeholder="Nombre maximum"
+              value={joueurMax}
+              onChange={(ev) => setJoueurMax(ev.target.value)}
+            />
+          </div>
+        </div>
         <label> Photos</label>
         <div className="mb-2 flex">
           <label
             className=" w-24 h-24 cursor-pointer flex flex-col justify-center items-center
-           text-gray-500 bg-gray-200 rounded-lg text-sm"
+           text-primary bg-gray-200 rounded-lg text-sm"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
-              />
-            </svg>
+            <BsCloudDownload className="w-6 h-6" />
             <div>Télécharger</div>
             <input
               type="file"
@@ -168,34 +197,6 @@ const JeuForm = ({
             <img src={imageSrc} className="rounded-lg" />
           </div>
         </div>
-        <label>Prix de base par joueur</label>
-        <input
-          type="number"
-          placeholder="Prix"
-          value={prix}
-          onChange={(ev) => setPrix(ev.target.value)}
-        />
-        <label>Âge minimum</label>
-        <input
-          type="number"
-          placeholder="Âge"
-          value={age}
-          onChange={(ev) => setAge(ev.target.value)}
-        />
-        <label>Nombre de joueur minimum</label>
-        <input
-          type="number"
-          placeholder="Nombre minimum"
-          value={joueurMin}
-          onChange={(ev) => setJoueurMin(ev.target.value)}
-        />
-        <label>Nombre de joueur maximum</label>
-        <input
-          type="number"
-          placeholder="Nombre maximum"
-          value={joueurMax}
-          onChange={(ev) => setJoueurMax(ev.target.value)}
-        />
         <button type="submit" className="btn-primary">
           Enregistrer
         </button>

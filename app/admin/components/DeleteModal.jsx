@@ -33,7 +33,7 @@ const DeleteModal = ({ isOpen, onClose, deleteCategorie }) => {
           <button
             onClick={deleteCategorie}
             className="flex gap-2 items-center justify-center border-2 border-red-600 bg-red-200 w-full
-           shadow-red-400/40 shadow-md rounded-lg py-1 px-3 font-semibold mt-2"
+           shadow-red-400/40 shadow-md rounded-lg py-1 px-3 font-semibold mt-2 text-red-600"
           >
             Supprimer
           </button>

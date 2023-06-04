@@ -10,48 +10,49 @@ img{
 }
 
 input,textarea,select{
-    @apply border border-gray-300 rounded-md  w-full py-2 px-3;
+    @apply border border-gray-200 rounded-md  w-full px-4 py-2;
+   
     @apply mb-2;
 }
 
 h1{
-    @apply text-blue-900 mb-2 text-xl
+    @apply text-gray-800 mb-4 text-xl
 }
 
 label{
-    @apply text-blue-900;
+    @apply text-gray-600 text-sm;
 }
 .btn-primary{
-    @apply bg-blue-900 text-white px-4 py-1 rounded-md;
+    @apply bg-primary  text-white px-4 py-1 rounded-md;
 }
 table.basic{
-    @apply w-full
+    @apply w-full bg-white rounded-lg shadow-lg
 }
 
 table.basic thead tr td {
-    @apply bg-blue-100
+    @apply text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-2 
 }
 
 table.basic tr td {
-    @apply border border-blue-200 p-1
+    @apply  px-4 py-1
 }
 table.basic a {
-    @apply bg-blue-900 text-white text-sm py-1 
-    px-2 rounded-md flex inline-flex gap-1 mr-1
+    @apply px-4 rounded-md inline-flex mx-1 items-center gap-1 text-sm py-1
+}
+table.basic button{
+    @apply px-4 rounded-md inline-flex mx-1 items-center gap-1 text-sm py-1
 }
 
-table.basic button{
-    @apply bg-blue-900 text-white text-sm py-1 
-    px-2 rounded-md flex inline-flex gap-1 mr-1
-}
 
 .btn-default ,.btn-red{
     @apply px-4 py-1 rounded-md
 }
 
 .btn-red{
-    @apply bg-red-800 text-white 
+    @apply  flex gap-2 items-center justify-center border-2 border-red-600 bg-red-200 
+    shadow-red-400/40 shadow-md rounded-lg py-1 px-3 font-semibold mt-2 text-red-600 
 }
 .btn-default{
-    @apply bg-gray-500 text-white
+    @apply flex gap-2 items-center justify-center
+    py-1 px-3 font-semibold mt-2 rounded-lg shadow-md bg-white text-gray-500  border border-gray-200
 }
