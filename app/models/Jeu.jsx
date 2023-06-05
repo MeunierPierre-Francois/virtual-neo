@@ -10,6 +10,7 @@ const JeuSchema = new Schema({
   joueurMin: { type: Number },
   imageSrc: { type: [String] },
   categorie: { type: mongoose.Types.ObjectId, ref: "Categorie" },
+  enAvant: { type: Boolean, default: false },
 });
 
 export const Jeu = models.Jeu || model("Jeu", JeuSchema);

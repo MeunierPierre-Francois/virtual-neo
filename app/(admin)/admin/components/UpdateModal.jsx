@@ -11,8 +11,7 @@ const UpdateModal = ({ isOpen, onClose, categorieNom, categorieId }) => {
     fetchCategories();
     closeModal();
   };
-  console.log(id);
-  console.log(nom);
+
   return (
     <div
       onClick={onClose}

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { slideIn, staggerContainer, textVariant } from "../Utils/motion";
+import { slideIn, staggerContainer, textVariant } from "../../Utils/motion";
 
 const Hero = () => {
   return (

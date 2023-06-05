@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { staggerContainer } from "../Utils/motion";
+import { staggerContainer } from "../../Utils/motion";
 import { ExploreCard, TitleText, TypingText } from "../components";
 
 const Explore = () => {

@@ -178,6 +178,7 @@ const JeuForm = ({
             />
           </div>
         </div>
+
         <label> Photos</label>
         <div className="mb-2 flex">
           <label

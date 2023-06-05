@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { TypingText } from "../components/TextCustom";
-import { staggerContainer, fadeIn } from "../Utils/motion";
+import { staggerContainer, fadeIn } from "../../Utils/motion";
 
 const About = () => {
   return (
