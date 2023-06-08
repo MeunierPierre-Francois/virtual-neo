@@ -51,29 +51,24 @@ const JeuForm = ({
   async function saveJeu(ev) {
     ev.preventDefault();
 
-    let image = null;
-    const form = ev.currentTarget;
-    const fileInput = Array.from(form.elements).find(
-      ({ name }) => name === "file"
-    );
-
-    if (fileInput.files.length > 0) {
+    const files = ev.target?.files;
+    if (files?.length > 0) {
       const formData = new FormData();
-
-      for (const file of fileInput.files) {
+      for (const file of files) {
         formData.append("file", file);
       }
       formData.append("upload_preset", "et2jomc9");
 
-      image = await fetch(
+      const data = await fetch(
         "https://api.cloudinary.com/v1_1/dwooxpvlr/image/upload",
         {
           method: "POST",
           body: formData,
-        }
-      ).then((response) => response.json());
+        }.then((r) => r.json())
+      );
 
-      setImageSrc(image.secure_url);
+      setImageSrc(data.secure_url);
+      console.log(secure_url);
     }
 
     const data = {

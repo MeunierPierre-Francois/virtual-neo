@@ -1,5 +1,5 @@
-const AdminHome = () => {
-  return <div>DASHBOARD</div>;
+const AdminHome = async () => {
+  return <div></div>;
 };
 
 export default AdminHome;

@@ -9,7 +9,7 @@ export async function GET(request, params) {
   return NextResponse.json(await Jeu.findOne({ _id: id }));
 }
 
-export async function DELETE(params) {
+export async function DELETE(request, params) {
   await mongooseConnect();
 
   const { id } = params.params;
@@ -24,8 +24,6 @@ export async function PUT(request, params) {
   const body = await request.json();
   const { enAvant } = body;
 
-  console.log("ID", id);
-  console.log("TEST", enAvant);
   return NextResponse.json(
     await Jeu.updateOne({ _id: id }, { enAvant: enAvant })
   );

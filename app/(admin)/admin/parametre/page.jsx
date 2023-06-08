@@ -35,7 +35,7 @@ const EnAvant = () => {
   return (
     <div>
       <h1>Paramètre</h1>
-      <h2>Jeux en avant (max 4)</h2>
+      <h2>Jeux en avant </h2>
       <table className="basic mt-2">
         <thead>
           <tr>

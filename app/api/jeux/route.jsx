@@ -11,6 +11,7 @@ export async function GET(request) {
 export async function POST(request) {
   await mongooseConnect();
   const body = await request.json();
+  console.log("URL IMAGE", body);
   const {
     nom,
     description,

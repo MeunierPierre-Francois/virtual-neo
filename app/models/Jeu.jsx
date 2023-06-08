@@ -8,7 +8,7 @@ const JeuSchema = new Schema({
   age: { type: Number },
   joueurMax: { type: Number },
   joueurMin: { type: Number },
-  imageSrc: { type: [String] },
+  imageSrc: { type: String },
   categorie: { type: mongoose.Types.ObjectId, ref: "Categorie" },
   enAvant: { type: Boolean, default: false },
 });
